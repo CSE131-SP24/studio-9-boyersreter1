@@ -29,10 +29,27 @@ public class WordCount {
 	 *         associated with the number of occurrences of the word
 	 */
 	public static Map<String, Integer> countWords(List<String> words) {
-
-		// FIXME
-		throw new NotYetImplementedException();
-
+		Map <String, Integer>countWords = new HashMap<>();
+		String noChickFilASauce;	
+		int count = 0;
+		for(int i = 0; i < words.size(); i++)
+			{
+			count=1;
+				noChickFilASauce = words.get(i);
+				for (int j =i+1; j < words.size(); j++)
+				{
+					if (noChickFilASauce == words.get(j))
+					{
+						count +=1;
+					}
+				}
+				if(false == countWords.containsKey(noChickFilASauce))
+				{
+					countWords.put(noChickFilASauce,count);
+				}
+				
+			}
+		return countWords;
 	}
 	
 	public static void main(String[] args) {
